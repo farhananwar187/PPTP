@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PptpAPI", "PptpAPI\PptpAPI.csproj", "{D172DC39-075C-4E21-96DC-21A3DDD2217C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPTPApp", "PPTPApp\PPTPApp.csproj", "{C7304229-2B82-4F8F-AC69-D02B37A48F6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPTPService", "PPTPService\PPTPService.csproj", "{A8F2838B-2AC3-477F-B40F-BBA9098CB26D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{D172DC39-075C-4E21-96DC-21A3DDD2217C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D172DC39-075C-4E21-96DC-21A3DDD2217C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D172DC39-075C-4E21-96DC-21A3DDD2217C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7304229-2B82-4F8F-AC69-D02B37A48F6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7304229-2B82-4F8F-AC69-D02B37A48F6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7304229-2B82-4F8F-AC69-D02B37A48F6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7304229-2B82-4F8F-AC69-D02B37A48F6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8F2838B-2AC3-477F-B40F-BBA9098CB26D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8F2838B-2AC3-477F-B40F-BBA9098CB26D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8F2838B-2AC3-477F-B40F-BBA9098CB26D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8F2838B-2AC3-477F-B40F-BBA9098CB26D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

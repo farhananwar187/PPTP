@@ -5,14 +5,19 @@ using System.Text;
 using System.Windows.Forms;
 using System.Net;
 using System.Text.RegularExpressions;
-
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using PPTPService;
 namespace myVPN
 {
     public partial class Form1 : Form
     {
+        static ServiceClient client = new ServiceClient();
         public Form1()
         {
             InitializeComponent();
+         
         }
 
         private static string FolderPath => string.Concat(Directory.GetCurrentDirectory(),
@@ -20,13 +25,13 @@ namespace myVPN
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            Data db = new Data();
-            server sv = new server();
-         var user=    db.GetUser(txtUsrname.Text, txtPassword.Text);
-            if (user != null)
-            {
-                sv = db.GetServer("195.154.58.188");
-            }
+            //Data db = new Data();
+            //server sv = new server();
+         //var user=    db.GetUser(txtUsrname.Text, txtPassword.Text);
+         //   if (user != null)
+         //   {
+         //       sv = db.GetServer("195.154.58.188");
+         //   }
             if (!Directory.Exists(FolderPath))
                 Directory.CreateDirectory(FolderPath);
 
@@ -36,13 +41,13 @@ namespace myVPN
             sb.AppendLine("Port=VPN2-0");
             sb.AppendLine("Device=WAN Miniport (IKEv2)");
             sb.AppendLine("DEVICE=vpn");
-            sb.AppendLine("PhoneNumber=" + sv.Server1);
+            //sb.AppendLine("PhoneNumber=" + sv.Server1);
 
             File.WriteAllText(FolderPath + "\\VpnConnection.pbk", sb.ToString());
 
             sb = new StringBuilder();
-            sb.AppendLine("rasdial \"VPN\" " + sv.User_Name + " " + sv.Password + " /phonebook:\"" + FolderPath +
-                          "\\VpnConnection.pbk\"");
+            //sb.AppendLine("rasdial \"VPN\" " + sv.User_Name + " " + sv.Password + " /phonebook:\"" + FolderPath +
+            //              "\\VpnConnection.pbk\"");
 
             File.WriteAllText(FolderPath + "\\VpnConnection.bat", sb.ToString());
 
@@ -60,7 +65,15 @@ namespace myVPN
             btnConnect.Enabled = false;
             btnDisconnect.Enabled = true;
         }
+        //static async Task<Uri> CreateProductAsync(use product)
+        //{
+        //    HttpResponseMessage response = await client.PostAsJsonAsync(
+        //        "api/products", product);
+        //    response.EnsureSuccessStatusCode();
 
+        //    // return URI of the created resource.
+        //    return response.Headers.Location;
+        //}
         private void btnDisconnect_Click(object sender, EventArgs e)
         {
             File.WriteAllText(FolderPath + "\\VpnDisconnect.bat", "rasdial /d");
@@ -82,32 +95,32 @@ namespace myVPN
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Data db = new Data();
-            string remoteUri = "http://freevpn.it/accounts/";
+           // Data db = new Data();
+           // string remoteUri = "http://freevpn.it/accounts/";
 
-            // Create a new WebClient instance.
-           WebClient myWebClient = new WebClient();
-            // Download home page data.
+           // // Create a new WebClient instance.
+           //WebClient myWebClient = new WebClient();
+           // // Download home page data.
 
-            // Download the Web resource and save it into a data buffer.
-            byte[] myDataBuffer = myWebClient.DownloadData(remoteUri);
+           // // Download the Web resource and save it into a data buffer.
+           // byte[] myDataBuffer = myWebClient.DownloadData(remoteUri);
 
-            // Display the downloaded data.
-            string download = Encoding.ASCII.GetString(myDataBuffer);
+           // // Display the downloaded data.
+           // string download = Encoding.ASCII.GetString(myDataBuffer);
 
-            string IP = getBetween(download, "<b>IP:</b>", "</li>");
-            string UserName = getBetween(download, "Username:</b>", "</li>");
-            string Password = getBetween(download, "<b>Password:</b>", "<span");
-            IP= Regex.Replace(IP, @"\s+", "");
-            UserName = Regex.Replace(UserName, @"\s+", "");
-            Password = Regex.Replace(Password, @"\s+", "");
-            server srv = new server();
-            srv.Server1 = IP;
-            srv.User_Name = UserName;
-            srv.Password = Password;
+           // string IP = getBetween(download, "<b>IP:</b>", "</li>");
+           // string UserName = getBetween(download, "Username:</b>", "</li>");
+           // string Password = getBetween(download, "<b>Password:</b>", "<span");
+           // IP= Regex.Replace(IP, @"\s+", "");
+           // UserName = Regex.Replace(UserName, @"\s+", "");
+           // Password = Regex.Replace(Password, @"\s+", "");
+           // server srv = new server();
+           // srv.Server1 = IP;
+           // srv.User_Name = UserName;
+           // srv.Password = Password;
 
-            db.AddServer(srv);
-            MessageBox.Show("Server Added Successfully");
+           // db.AddServer(srv);
+           // MessageBox.Show("Server Added Successfully");
         }
         public static string getBetween(string strSource, string strStart, string strEnd)
         {

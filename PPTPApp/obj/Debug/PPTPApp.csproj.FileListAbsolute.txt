@@ -1,0 +1,15 @@
+C:\Users\Farhan Anwar\source\repos\PPTP\PPTPApp\bin\Debug\PPTPApp.exe.config
+C:\Users\Farhan Anwar\source\repos\PPTP\PPTPApp\bin\Debug\PPTPApp.exe
+C:\Users\Farhan Anwar\source\repos\PPTP\PPTPApp\bin\Debug\PPTPApp.pdb
+C:\Users\Farhan Anwar\source\repos\PPTP\PPTPApp\obj\Debug\PPTPApp.csprojAssemblyReference.cache
+C:\Users\Farhan Anwar\source\repos\PPTP\PPTPApp\obj\Debug\MainWindow.g.cs
+C:\Users\Farhan Anwar\source\repos\PPTP\PPTPApp\obj\Debug\App.g.cs
+C:\Users\Farhan Anwar\source\repos\PPTP\PPTPApp\obj\Debug\PPTPApp_MarkupCompile.cache
+C:\Users\Farhan Anwar\source\repos\PPTP\PPTPApp\obj\Debug\PPTPApp_MarkupCompile.lref
+C:\Users\Farhan Anwar\source\repos\PPTP\PPTPApp\obj\Debug\MainWindow.baml
+C:\Users\Farhan Anwar\source\repos\PPTP\PPTPApp\obj\Debug\PPTPApp.g.resources
+C:\Users\Farhan Anwar\source\repos\PPTP\PPTPApp\obj\Debug\PPTPApp.Properties.Resources.resources
+C:\Users\Farhan Anwar\source\repos\PPTP\PPTPApp\obj\Debug\PPTPApp.csproj.GenerateResource.cache
+C:\Users\Farhan Anwar\source\repos\PPTP\PPTPApp\obj\Debug\PPTPApp.csproj.CoreCompileInputs.cache
+C:\Users\Farhan Anwar\source\repos\PPTP\PPTPApp\obj\Debug\PPTPApp.exe
+C:\Users\Farhan Anwar\source\repos\PPTP\PPTPApp\obj\Debug\PPTPApp.pdb
