@@ -98,6 +98,7 @@
       <DependentUpon>DBInfo.edmx</DependentUpon>
       <LastGenOutput>DBInfo.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\CreateTables.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

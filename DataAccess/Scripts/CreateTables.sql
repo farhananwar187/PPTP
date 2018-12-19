@@ -1,0 +1,60 @@
+USE [PPTP]
+GO
+
+/****** Object:  Table [dbo].[User]    Script Date: 12/19/2018 23:56:43 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[User](
+	[User_Id] [varchar](150) NOT NULL,
+	[User_Name] [varchar](150) NOT NULL,
+	[Password] [varchar](50) NOT NULL,
+	[Is_Active] [bit] NOT NULL,
+ CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED 
+(
+	[User_Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
+USE [PPTP]
+GO
+
+/****** Object:  Table [dbo].[servers]    Script Date: 12/19/2018 23:56:39 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[servers](
+	[Info_Id] [int] IDENTITY(1,1) NOT NULL,
+	[Server] [varchar](150) NULL,
+	[User_Name] [varchar](150) NULL,
+	[Password] [varchar](150) NULL,
+ CONSTRAINT [PK_servers] PRIMARY KEY CLUSTERED 
+(
+	[Info_Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+

@@ -1,6 +1,0 @@
-C:\Users\Farhan Anwar\source\repos\PPTP\PPTPService\bin\Debug\PPTPService.dll
-C:\Users\Farhan Anwar\source\repos\PPTP\PPTPService\bin\Debug\PPTPService.pdb
-C:\Users\Farhan Anwar\source\repos\PPTP\PPTPService\obj\Debug\PPTPService.csprojAssemblyReference.cache
-C:\Users\Farhan Anwar\source\repos\PPTP\PPTPService\obj\Debug\PPTPService.csproj.CoreCompileInputs.cache
-C:\Users\Farhan Anwar\source\repos\PPTP\PPTPService\obj\Debug\PPTPService.dll
-C:\Users\Farhan Anwar\source\repos\PPTP\PPTPService\obj\Debug\PPTPService.pdb
