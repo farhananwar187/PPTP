@@ -101,6 +101,10 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{6eaa6547-07b0-41bc-bd89-a5f8d9e3d207}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PPTPService\PPTPService.csproj">
       <Project>{a8f2838b-2ac3-477f-b40f-bba9098cb26d}</Project>
       <Name>PPTPService</Name>

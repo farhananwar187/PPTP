@@ -31,13 +31,13 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.Label2 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
-            this.txtHost = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
             this.txtUsrname = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnDisconnect = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
+            this.txtHost = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -48,7 +48,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
             this.tableLayoutPanel2.Controls.Add(this.Label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.Label4, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.txtPassword, 1, 2);
@@ -88,14 +88,6 @@
             this.Label4.TabIndex = 17;
             this.Label4.Text = "Password";
             // 
-            // txtHost
-            // 
-            this.txtHost.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtHost.Location = new System.Drawing.Point(70, 26);
-            this.txtHost.Name = "txtHost";
-            this.txtHost.Size = new System.Drawing.Size(246, 20);
-            this.txtHost.TabIndex = 17;
-            // 
             // txtPassword
             // 
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -103,6 +95,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(246, 20);
             this.txtPassword.TabIndex = 11;
+            this.txtPassword.Text = "pwd321";
             // 
             // Label3
             // 
@@ -121,6 +114,7 @@
             this.txtUsrname.Name = "txtUsrname";
             this.txtUsrname.Size = new System.Drawing.Size(246, 20);
             this.txtUsrname.TabIndex = 10;
+            this.txtUsrname.Text = "farhan";
             // 
             // tableLayoutPanel3
             // 
@@ -134,14 +128,14 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(264, 69);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(263, 69);
             this.tableLayoutPanel3.TabIndex = 19;
             // 
             // btnDisconnect
             // 
             this.btnDisconnect.Enabled = false;
-            this.btnDisconnect.Location = new System.Drawing.Point(135, 3);
+            this.btnDisconnect.Location = new System.Drawing.Point(134, 3);
             this.btnDisconnect.Name = "btnDisconnect";
             this.btnDisconnect.Size = new System.Drawing.Size(75, 23);
             this.btnDisconnect.TabIndex = 15;
@@ -159,9 +153,18 @@
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
+            // txtHost
+            // 
+            this.txtHost.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtHost.Location = new System.Drawing.Point(70, 26);
+            this.txtHost.Name = "txtHost";
+            this.txtHost.Size = new System.Drawing.Size(246, 20);
+            this.txtHost.TabIndex = 17;
+            this.txtHost.Text = "195.154.58.188";
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(340, 3);
+            this.button1.Location = new System.Drawing.Point(339, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 20;

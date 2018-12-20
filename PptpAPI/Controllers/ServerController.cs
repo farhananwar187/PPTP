@@ -10,24 +10,24 @@ namespace PptpAPI.Controllers
     public class ServerController : ApiController
     {
         // GET: api/Pptp
-        //public List<User> GetUsers()
-        //{
-        //    using (PPTPEntities db = new PPTPEntities())
-        //    {
-        //        var res = db.Users.ToList();
-        //        return res;
-        //    }
-        //}
-
-        //GET: api/Pptp/5
-        public server GetServer([FromBody] server srv)
+        public server GetServer()
         {
             using (PPTPEntities db = new PPTPEntities())
             {
-                var res = db.servers.ToList().Find(p => p.Server1 == srv.Server1);
+                var res = db.servers.ToList().FirstOrDefault();
                 return res;
             }
         }
+
+        //GET: api/Pptp/5
+        //public server GetServer([FromBody] server srv)
+        //{
+        //    using (PPTPEntities db = new PPTPEntities())
+        //    {
+        //        var res = db.servers.ToList().Find(p => p.Server1 == srv.Server1);
+        //        return res;
+        //    }
+        //}
 
         // POST: api/Pptp
         public string PostServer([FromBody]server srv)

@@ -9,14 +9,17 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using PPTPService;
+using DataAccess;
 namespace myVPN
 {
     public partial class Form1 : Form
     {
-        static ServiceClient client = new ServiceClient();
+        static ServiceClient client;
         public Form1()
         {
+            client = new ServiceClient();
             InitializeComponent();
+
          
         }
 
@@ -26,12 +29,12 @@ namespace myVPN
         private void btnConnect_Click(object sender, EventArgs e)
         {
             //Data db = new Data();
-            //server sv = new server();
-         //var user=    db.GetUser(txtUsrname.Text, txtPassword.Text);
-         //   if (user != null)
-         //   {
-         //       sv = db.GetServer("195.154.58.188");
-         //   }
+            server sv = new server();
+            var user = client.GetUserAsync(txtUsrname.Text, txtPassword.Text).Result;
+            if (user != null)
+            {
+               sv = client.GetServerAsync("195.154.58.188").Result;
+            }
             if (!Directory.Exists(FolderPath))
                 Directory.CreateDirectory(FolderPath);
 
@@ -41,13 +44,13 @@ namespace myVPN
             sb.AppendLine("Port=VPN2-0");
             sb.AppendLine("Device=WAN Miniport (IKEv2)");
             sb.AppendLine("DEVICE=vpn");
-            //sb.AppendLine("PhoneNumber=" + sv.Server1);
+            sb.AppendLine("PhoneNumber=" + sv.Server1);
 
             File.WriteAllText(FolderPath + "\\VpnConnection.pbk", sb.ToString());
 
             sb = new StringBuilder();
-            //sb.AppendLine("rasdial \"VPN\" " + sv.User_Name + " " + sv.Password + " /phonebook:\"" + FolderPath +
-            //              "\\VpnConnection.pbk\"");
+            sb.AppendLine("rasdial \"VPN\" " + sv.User_Name + " " + sv.Password + " /phonebook:\"" + FolderPath +
+                          "\\VpnConnection.pbk\"");
 
             File.WriteAllText(FolderPath + "\\VpnConnection.bat", sb.ToString());
 

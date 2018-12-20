@@ -20,14 +20,22 @@ namespace PptpAPI.Controllers
         //}
 
         //GET: api/Pptp/5
-        public User GetUser([FromBody] User user)
+        public User GetUser()
         {
             using (PPTPEntities db = new PPTPEntities())
             {
-                var res = db.Users.ToList().Find(p => p.User_Id == user.User_Id && p.Password == user.Password);
+                var res = db.Users.ToList().FirstOrDefault();
                 return res;
             }
         }
+        //public User GetUser([FromBody] User user)
+        //{
+        //    using (PPTPEntities db = new PPTPEntities())
+        //    {
+        //        var res = db.Users.ToList().Find(p => p.User_Id == user.User_Id && p.Password == user.Password);
+        //        return res;
+        //    }
+        //}
 
         // POST: api/Pptp
         public void Post([FromBody]string value)
